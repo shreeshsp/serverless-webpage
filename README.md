@@ -1,1 +1,2 @@
 # serverless-webpage
+Serverless webpages are built using API Gateway and Lambda. When users visit the webpage, the domain name gets resolved to Amazon S3 bucket which provides storage for webpages. The webpages contain push buttons and when user click the button it triggers GET request to API Gateway. This will in turn trigger individual lambda functions which will return a response back through API Gateway to Amazon S3 and it will be returned back to the user.
