@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<script>
+
+function myFunction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("my-demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "https://fze3rjyqm9.execute-api.us-east-1.amazonaws.com/prod/myServerlessWeb", true);
+    xhttp.send();
+
+}
+
+</script>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome pages</title>
+ 
+
+      <link rel="stylesheet" href="css/index_style.css">
+
+  
+</head>
+
+<body>
+
+<div class="text-wrapper">
+  <div class="title">
+        Welcome
+    </div>
+
+    <div class="subtitle">
+        Hi <span id="my-demo"> ! </span><br>
+		We Build Awesome Serverless Webpage.<br>
+		<button onclick="myFunction()">Click me</button><br>
+	</div>
+</div>
+</body>
+
+</html>
